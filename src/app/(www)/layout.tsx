@@ -1,3 +1,6 @@
+import Navbar from "@/components/common/navbar";
+import Footer from "@/components/common/footer";
+
 export default function Layout({
     children,
 }: {
@@ -5,7 +8,9 @@ export default function Layout({
 }) {
     return (
         <main className="w-full grow relative">
+            <Navbar/>
             {children}
+            <Footer/>
         </main>
     );
 };
