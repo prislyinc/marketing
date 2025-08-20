@@ -11,7 +11,7 @@ const Footer = () => {
   }, [])
 
   return (
-    <footer className="relative bg-[#0d0d0d] text-gray-300 overflow-hidden">
+    <footer className="relative bg-black text-gray-300 overflow-hidden">
       <div className="relative z-20 px-6 md:px-16 py-16 grid grid-cols-2 md:grid-cols-3 gap-10">
         {FOOTER_LINKS.map((section) => (
           <div key={section.title}>

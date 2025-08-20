@@ -19,18 +19,24 @@ const MobileMenu = () => {
           <MenuIcon className="size-5" />
         </Button>
       </SheetTrigger>
-      <SheetContent side="right" className="p-4">
+
+      <SheetContent side="right" className="p-6 sm:p-8 w-full max-w-xs">
         <SheetHeader className="sr-only">
           <SheetTitle>Menu</SheetTitle>
         </SheetHeader>
+
         <div className="flex flex-col gap-6 mt-8">
           {NAV_LINKS.map((link, index) => (
             <SheetClose asChild key={index}>
-              <Link href={link.link} className="text-lg font-medium w-full">
+              <Link
+                href={link.link}
+                className="text-lg font-medium w-full px-2 sm:px-0"
+              >
                 {link.name}
               </Link>
             </SheetClose>
           ))}
+
           <SheetClose asChild>
             <Link href="/" className="w-full mt-4">
               <Button size="lg" variant="outline" className="w-full">

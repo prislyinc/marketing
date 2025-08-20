@@ -8,9 +8,11 @@ export default function Layout({
 }) {
     return (
         <main className="w-full grow relative">
-            <Navbar/>
-            {children}
-            <Footer/>
+            <div className="px-4 sm:px-6 lg:px-8">
+                <Navbar />
+                {children}
+                <Footer />
+            </div>
         </main>
     );
 };
