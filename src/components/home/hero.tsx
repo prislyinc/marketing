@@ -17,7 +17,7 @@ const Hero = () => {
             </div>
 
             <Wrapper className="py-20 relative z-10">
-                <div className="flex flex-col items-start sm:items-start md:items-start items-center justify-center w-full gap-6 text-left sm:text-left md:text-left text-center px-4 sm:px-0">
+                <div className="flex flex-col items-start sm:items-start md:items-start justify-center w-full gap-6 text-left sm:text-left md:text-left px-4 sm:px-0">
                     <Container delay={0.1}>
                         <BlurText
                             text={["Tenha seu bot", "em segundos"]}
