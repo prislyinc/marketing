@@ -10,7 +10,7 @@ import ShinyText from '@/components/global/text/shiny';
 
 import { BorderBeam } from '@/components/global/border-beam';
 
-const Hero = () => {
+const HomeHero = () => {
     return (
         <section className="relative w-full h-full mt-10">
             <div className="absolute inset-0 z-0">
@@ -62,4 +62,4 @@ const Hero = () => {
     )
 }
 
-export default Hero;
+export default HomeHero;
