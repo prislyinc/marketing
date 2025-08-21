@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState } from "react";
 import Wrapper from "@/components/global/wrapper";
@@ -7,19 +7,23 @@ import { PLAN, ADDITIONAL_SPECS } from "@/constants/application";
 import { Button } from "@/components/ui/button";
 
 const ApplicationPrice = () => {
-  const [selectedSpecs, setSelectedSpecs] = useState<string[]>([])
+  const [selectedSpecs, setSelectedSpecs] = useState<string[]>([]);
 
   const calculateTotalPrice = () => {
     const additionalCost = selectedSpecs.reduce((total, specId) => {
-      const spec = ADDITIONAL_SPECS.find((s) => s.id === specId)
-      return total + (spec?.price || 0)
-    }, 0)
-    return PLAN.price + additionalCost
-  }
+      const spec = ADDITIONAL_SPECS.find((s) => s.id === specId);
+      return total + (spec?.price || 0);
+    }, 0);
+    return PLAN.price + additionalCost;
+  };
 
   const toggleSpec = (specId: string) => {
-    setSelectedSpecs((prev) => (prev.includes(specId) ? prev.filter((id) => id !== specId) : [...prev, specId]))
-  }
+    setSelectedSpecs((prev) =>
+      prev.includes(specId)
+        ? prev.filter((id) => id !== specId)
+        : [...prev, specId]
+    );
+  };
 
   return (
     <section className="w-full py-16 lg:py-24">
@@ -45,8 +49,12 @@ const ApplicationPrice = () => {
               </div>
 
               <div className="flex flex-col gap-1 py-2">
-                <p className="text-xl font-bold text-white sm:text-2xl">{PLAN.name}</p>
-                <p className="text-sm font-normal text-neutral-400 sm:text-base">{PLAN.description}</p>
+                <p className="text-xl font-bold text-white sm:text-2xl">
+                  {PLAN.name}
+                </p>
+                <p className="text-sm font-normal text-neutral-400 sm:text-base">
+                  {PLAN.description}
+                </p>
               </div>
 
               <div className="flex items-baseline gap-2">
@@ -57,7 +65,9 @@ const ApplicationPrice = () => {
               </div>
 
               <div className="flex flex-col gap-3">
-                <h4 className="text-sm font-semibold text-neutral-300">Adicionais (opcionais):</h4>
+                <h4 className="text-sm font-semibold text-neutral-300">
+                  Adicionais (opcionais):
+                </h4>
                 <div className="grid gap-2">
                   {ADDITIONAL_SPECS.map((spec) => (
                     <article
@@ -69,20 +79,32 @@ const ApplicationPrice = () => {
                           : "border-neutral-600 hover:border-neutral-500"
                       }`}
                     >
-                      <div className="flex items-center justify-between">
-                        <div className="text-left">
-                          <h3 className="text-sm font-semibold text-white">{spec.name}</h3>
-                          <p className="text-xs text-neutral-400">{spec.description}</p>
+                      <div className="flex items-start justify-between">
+                        <div className="text-left max-w-[70%]">
+                          <h3 className="text-sm font-semibold text-white">
+                            {spec.name}
+                          </h3>
+                          <p className="text-xs text-neutral-400 break-words">
+                            {spec.description}
+                          </p>
                         </div>
-                        <div className="flex items-center gap-2">
-                          <p className="font-bold text-neutral-300">+R$ {spec.price.toFixed(2).replace(".", ",")}</p>
+                        <div className="flex flex-col items-end gap-1 shrink-0">
+                          <p className="font-bold text-neutral-300 whitespace-nowrap">
+                            +R$ {spec.price.toFixed(2).replace(".", ",")}
+                          </p>
                           <div
                             className={`w-4 h-4 rounded border-2 flex items-center justify-center ${
-                              selectedSpecs.includes(spec.id) ? "border-white bg-white" : "border-neutral-600"
+                              selectedSpecs.includes(spec.id)
+                                ? "border-white bg-white"
+                                : "border-neutral-600"
                             }`}
                           >
                             {selectedSpecs.includes(spec.id) && (
-                              <svg className="w-2 h-2 text-black" fill="currentColor" viewBox="0 0 20 20">
+                              <svg
+                                className="w-2 h-2 text-black"
+                                fill="currentColor"
+                                viewBox="0 0 20 20"
+                              >
                                 <path
                                   fillRule="evenodd"
                                   d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -104,15 +126,15 @@ const ApplicationPrice = () => {
                     key={idx}
                     className="group/attribute flex flex-1 flex-col justify-center rounded-md border-2 border-neutral-700 bg-neutral-900 px-4 py-2 text-center"
                   >
-                    <span className="text-xs font-semibold text-white md:text-sm">{feature}</span>
+                    <span className="text-xs font-semibold text-white md:text-sm">
+                      {feature}
+                    </span>
                   </div>
                 ))}
               </div>
 
               <div className="w-full mt-4">
-                <Button className="cursor-pointer">
-                  Comece agora
-                </Button>
+                <Button className="cursor-pointer">Comece agora</Button>
               </div>
             </div>
 
@@ -128,7 +150,7 @@ const ApplicationPrice = () => {
         </Container>
       </Wrapper>
     </section>
-  )
-}
+  );
+};
 
 export default ApplicationPrice;
