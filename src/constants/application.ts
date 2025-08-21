@@ -83,3 +83,23 @@ export const APPLICATION_FEATURES: Application[] = [
     category: "fivem",
   },
 ];
+
+export const PLAN = {
+  name: "Prisly+",
+  price: 29.90,
+  badge: "O MELHOR PRA VOCÊ!",
+  description:
+    "Imagine seu servidor, apenas 10x mais leve e fácil para seus membros interagir, socializar e jogar!",
+  features: ["Todos os sistemas/comandos citados logo acima"],
+  image: "https://i.pinimg.com/736x/a7/57/e4/a757e4c7385f9ca110252acf885240e0.jpg",
+};
+
+export const ADDITIONAL_SPECS = [
+  {
+    id: "biography",
+    name: "Biografia Personalizada",
+    description: "Com este adicional, você poderá definir a biografia do seu bot como desejar.",
+    price: 10.0,
+    category: "appearance"
+  }
+];
