@@ -8,6 +8,8 @@ import DarkVeil from '@/components/global/background/dark-veil';
 import BlurText from '@/components/global/text/blur';
 import ShinyText from '@/components/global/text/shiny';
 
+import { BorderBeam } from '@/components/global/border-beam';
+
 const Hero = () => {
     return (
         <section className="relative w-full h-full mt-10">
@@ -39,7 +41,18 @@ const Hero = () => {
 
                     <Container delay={0.3}>
                         <div className="mt-6 flex flex-wrap gap-4 w-full justify-center sm:justify-start">
-                            <Button className="flex-1 min-w-[140px] sm:flex-auto cursor-pointer" size="md">Comece Agora</Button>
+                            <Button className="flex-1 min-w-[140px] sm:flex-auto cursor-pointer" size="md" variant="outline">Comece Agora
+                                <BorderBeam
+                                    size={40}
+                                    initialOffset={20}
+                                    className="from-transparent via-purple-500/40 to-transparent"
+                                    transition={{
+                                        type: "spring",
+                                        stiffness: 60,
+                                        damping: 20,
+                                    }}
+                                />
+                            </Button>
                             <Button className="flex-1 min-w-[140px] sm:flex-auto cursor-pointer" size="md" variant="outline">Suporte</Button>
                         </div>
                     </Container>

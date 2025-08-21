@@ -5,28 +5,30 @@ import Wrapper from "@/components/global/wrapper";
 import Container from "@/components/global/container";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-
-import { FlickeringGrid } from "@/components/global/background/flickering";
+import { BorderBeam } from "@/components/global/border-beam";
 
 const CTA = () => {
   return (
     <section className="w-full py-16 relative overflow-hidden">
-      <FlickeringGrid
-        className="absolute inset-0 z-0"
-        squareSize={4}
-        gridGap={7}
-        color="#6B7280"
-        maxOpacity={0.3}
-        flickerChance={0.1}
-        height={1800}
-        width={1800}
-      />
-
       <Wrapper className="relative z-10">
         <Container delay={0.1}>
-          <div className="flex flex-col md:flex-row items-start justify-between 
+          <div
+            className="flex flex-col md:flex-row items-start justify-between 
                           bg-black/80 backdrop-blur-sm rounded-xl border border-white/5 
-                          p-6 md:p-10 gap-6 shadow-lg">
+                          p-6 md:p-10 gap-6 shadow-lg"
+          >
+            <BorderBeam
+              duration={6}
+              size={400}
+              className="from-transparent via-blue-500/40 to-transparent"
+            />
+            <BorderBeam
+              duration={6}
+              delay={3}
+              size={400}
+              borderWidth={2}
+              className="from-transparent via-purple-500/40 to-transparent"
+            />
 
             <div className="flex flex-col text-start">
               <h2 className="text-2xl md:text-4xl font-bold text-white mb-3">
@@ -41,7 +43,7 @@ const CTA = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="group text-sm md:text-base px-5 py-2 rounded-lg cursor-pointer"
+                className="hover:scale-105 group text-sm md:text-base px-5 py-2 rounded-lg cursor-pointer"
               >
                 Comece Agora{" "}
                 <ArrowRight
