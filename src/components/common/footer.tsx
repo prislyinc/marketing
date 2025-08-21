@@ -32,7 +32,7 @@ const Footer = () => {
         ))}
       </div>
 
-      <div className="relative z-20 flex flex-col md:flex-row justify-between items-center px-6 md:px-16 py-6 border-t border-neutral-800">
+      <div className="relative z-20 flex flex-col md:flex-row justify-between items-center px-6 md:px-16 py-6">
         <div className="flex space-x-6 mb-4 md:mb-0">
           {SOCIAL_LINKS.map((social) => (
             <Link

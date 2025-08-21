@@ -39,8 +39,8 @@ const Hero = () => {
 
                     <Container delay={0.3}>
                         <div className="mt-6 flex flex-wrap gap-4 w-full justify-center sm:justify-start">
-                            <Button className="flex-1 min-w-[140px] sm:flex-auto" size="md">Comece Agora</Button>
-                            <Button className="flex-1 min-w-[140px] sm:flex-auto" size="md" variant="outline">Suporte</Button>
+                            <Button className="flex-1 min-w-[140px] sm:flex-auto cursor-pointer" size="md">Comece Agora</Button>
+                            <Button className="flex-1 min-w-[140px] sm:flex-auto cursor-pointer" size="md" variant="outline">Suporte</Button>
                         </div>
                     </Container>
                 </div>

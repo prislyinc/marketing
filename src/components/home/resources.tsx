@@ -1,6 +1,5 @@
 import Wrapper from "@/components/global/wrapper";
 import Container from "@/components/global/container";
-import SectionBadge from "@/components/global/section-badge";
 import { Button } from "@/components/ui/button";
 import clsx from "clsx";
 
@@ -12,9 +11,6 @@ const Resources = () => {
       <Wrapper className="py-20 relative z-10 lg:py-32">
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-24">
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left gap-4 lg:flex-1">
-            <Container delay={0.2}>
-              <SectionBadge title="Prisly" />
-            </Container>
 
             <Container delay={0.3}>
               <h2 className="text-2xl md:text-4xl lg:text-5xl font-medium !leading-tight text-transparent bg-clip-text bg-gradient-to-b from-foreground to-neutral-400">
@@ -33,7 +29,7 @@ const Resources = () => {
             <Container delay={0.5}>
               <Button
                 variant="outline"
-                className="hover:scale-105 transition-transform"
+                className="hover:scale-105 transition-transform cursor-pointer"
               >
                 Comece sua jornada!
               </Button>

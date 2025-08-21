@@ -4,16 +4,16 @@ import { BsTwitterX } from "react-icons/bs";
 
 export const NAV_LINKS = [
   {
-    name: "Preço",
-    link: "/price",
+    name: "Aplicação",
+    link: "/application",
   },
   {
-    name: "Changelog",
+    name: "Sobre nós",
     link: "/changelog",
   },
   {
-    name: "Aplicação",
-    link: "/application",
+    name: "Changelog",
+    link: "/about",
   },
   {
     name: "Guia",
@@ -25,9 +25,8 @@ export const FOOTER_LINKS = [
   {
     title: "PRODUTO",
     links: [
-      { name: "Preço", href: "/price" },
-      { name: "Status", href: "/status" },
       { name: "Aplicação", href: "/application" },
+      { name: "Status", href: "/status" },
       { name: "Dashboard", href: "/dashboard" },
     ],
   },

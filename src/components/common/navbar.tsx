@@ -56,7 +56,7 @@ const Navbar = () => {
 
         <div className="flex items-center gap-x-4">
           <Link href="/" className="hidden lg:block">
-            <Button size="sm" variant="outline">
+            <Button size="sm" variant="outline" className="cursor-pointer">
               Começar
             </Button>
           </Link>

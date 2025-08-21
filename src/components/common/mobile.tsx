@@ -39,7 +39,7 @@ const MobileMenu = () => {
 
           <SheetClose asChild>
             <Link href="/" className="w-full mt-4">
-              <Button size="lg" variant="outline" className="w-full">
+              <Button size="lg" variant="outline" className="w-full cursor-pointer">
                 Começar
               </Button>
             </Link>

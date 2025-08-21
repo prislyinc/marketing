@@ -1,4 +1,5 @@
 import Navbar from "@/components/common/navbar";
+import CTA from "@/components/common/cta";
 import Footer from "@/components/common/footer";
 
 export default function Layout({
@@ -11,6 +12,7 @@ export default function Layout({
             <div className="px-4 sm:px-6 lg:px-8">
                 <Navbar />
                 {children}
+                <CTA />
                 <Footer />
             </div>
         </main>
