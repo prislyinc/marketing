@@ -9,7 +9,7 @@ import {
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { NAV_LINKS } from "@/constants/links";
-import { MenuIcon } from "lucide-react";
+import { MenuIcon, ChevronRight } from "lucide-react";
 
 const MobileMenu = () => {
   return (
@@ -30,16 +30,23 @@ const MobileMenu = () => {
             <SheetClose asChild key={index}>
               <Link
                 href={link.link}
-                className="text-lg font-medium w-full px-2 sm:px-0"
+                className="group text-lg font-medium w-full px-2 sm:px-0 inline-flex items-center transition-all duration-200"
               >
-                {link.name}
+                <span className="transition-transform duration-200 group-hover:translate-x-1">
+                  {link.name}
+                </span>
+                <ChevronRight className="w-4 h-4 ml-1 opacity-0 transform transition-all duration-200 group-hover:opacity-100 group-hover:translate-x-1 group-hover:scale-110" />
               </Link>
             </SheetClose>
           ))}
 
           <SheetClose asChild>
             <Link href="/" className="w-full mt-4">
-              <Button size="lg" variant="outline" className="w-full cursor-pointer">
+              <Button
+                size="lg"
+                variant="outline"
+                className="w-full cursor-pointer"
+              >
                 Começar
               </Button>
             </Link>
