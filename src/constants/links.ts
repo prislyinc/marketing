@@ -9,11 +9,11 @@ export const NAV_LINKS = [
   },
   {
     name: "Sobre nós",
-    link: "/changelog",
+    link: "/about",
   },
   {
     name: "Changelog",
-    link: "/about",
+    link: "/changelog",
   },
   {
     name: "Guia",
